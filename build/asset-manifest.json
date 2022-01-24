@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/static/js/main.240ac0f7.chunk.js",
+    "main.js.map": "/static/js/main.240ac0f7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e41ebd2f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e41ebd2f.js.map",
+    "static/js/2.02ce72ce.chunk.js": "/static/js/2.02ce72ce.chunk.js",
+    "static/js/2.02ce72ce.chunk.js.map": "/static/js/2.02ce72ce.chunk.js.map",
+    "static/js/3.4d64db79.chunk.js": "/static/js/3.4d64db79.chunk.js",
+    "static/js/3.4d64db79.chunk.js.map": "/static/js/3.4d64db79.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.02ce72ce.chunk.js.LICENSE.txt": "/static/js/2.02ce72ce.chunk.js.LICENSE.txt",
+    "static/media/ana-frantz-azRS34AdaaM-unsplash.82fdd05b.jpg": "/static/media/ana-frantz-azRS34AdaaM-unsplash.82fdd05b.jpg",
+    "static/media/annie-spratt-8mqOw4DBBSg-unsplash.50e89e62.jpg": "/static/media/annie-spratt-8mqOw4DBBSg-unsplash.50e89e62.jpg",
+    "static/media/devin-avery-BRVqq2uak4E-unsplash.2c074bc4.jpg": "/static/media/devin-avery-BRVqq2uak4E-unsplash.2c074bc4.jpg",
+    "static/media/julius-drost-ttm_4U63b90-unsplash.5f3ea4d7.jpg": "/static/media/julius-drost-ttm_4U63b90-unsplash.5f3ea4d7.jpg",
+    "static/media/karina-vargas-J7hCnavj7QE-unsplash.f309592f.jpg": "/static/media/karina-vargas-J7hCnavj7QE-unsplash.f309592f.jpg",
+    "static/media/nagy-arnold-X_IvVDuHvDQ-unsplash.eece632a.jpg": "/static/media/nagy-arnold-X_IvVDuHvDQ-unsplash.eece632a.jpg",
+    "static/media/nishaan-ahmed-mDQM7TmmcD4-unsplash.5fce07f1.jpg": "/static/media/nishaan-ahmed-mDQM7TmmcD4-unsplash.5fce07f1.jpg",
+    "static/media/rodion-kutsaev-049M_crau5k-unsplash.dbf1798a.jpg": "/static/media/rodion-kutsaev-049M_crau5k-unsplash.dbf1798a.jpg",
+    "static/media/stefan-stefancik-QXevDflbl8A-unsplash.eb1ae1cd.jpg": "/static/media/stefan-stefancik-QXevDflbl8A-unsplash.eb1ae1cd.jpg",
+    "static/media/tamara-bellis-kyg5fvluhxw-unsplash 2.5dd35f23.png": "/static/media/tamara-bellis-kyg5fvluhxw-unsplash 2.5dd35f23.png",
+    "static/media/xps-8pb7Hq539Zw-unsplash.d259d177.jpg": "/static/media/xps-8pb7Hq539Zw-unsplash.d259d177.jpg",
+    "static/media/yoal-desurmont-jqgsM3B9Fpo-unsplash.a773bd4a.jpg": "/static/media/yoal-desurmont-jqgsM3B9Fpo-unsplash.a773bd4a.jpg",
+    "static/media/—Pngtree—cartoon character happy group of_6728410.0422d1b6.png": "/static/media/—Pngtree—cartoon character happy group of_6728410.0422d1b6.png",
+    "static/media/—Pngtree—celtic life tree decoration pattern_6814309.f8a7eba6.png": "/static/media/—Pngtree—celtic life tree decoration pattern_6814309.f8a7eba6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e41ebd2f.js",
+    "static/js/2.02ce72ce.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.240ac0f7.chunk.js"
+  ]
+}
