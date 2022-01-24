@@ -1,0 +1,103 @@
+@media (min-width: 768px) {
+    .card-article-principal-oeuvre {
+        display: flex;
+        justify-content: space-around;
+
+        .image-media-oeuvre-toi {
+            display: inline-block;
+            width: 50rem;
+            margin-right: 2rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 9rem;
+        }
+    }
+
+    .cards-carousel-oeuvre-toi {
+        display: flex;
+    }
+
+    .oeuvre-article-details {
+        img {
+            width: 60%;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        p {
+            display: flex;
+            margin: 0 auto;
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 882px) {
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 12.5rem;
+        }
+    }
+}
+
+@media (min-width: 958px) {
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 15rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-article-principal-oeuvre {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 13.5rem;
+        }
+    }
+}
+
+@media (min-width: 1122px) {
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 16.5rem;
+        }
+    }
+}
+
+@media (min-width: 1222px) {
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 17.5rem;
+        }
+    }
+}
+
+@media (min-width: 1322px) {
+    .oeuvre-toi {
+        #horizontal-carousel-oeuvre {
+            margin-left: 22.5rem;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .oeuvre-article-details {
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+}

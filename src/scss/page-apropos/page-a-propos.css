@@ -1,0 +1,30 @@
+.page-a-propos {
+  background-color: #C8D7CC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-a-propos h1 {
+  margin: 0;
+  margin-top: 2rem;
+  margin-left: 1.3rem;
+  color: white;
+  font-style: italic;
+  font-size: 2rem;
+}
+.page-a-propos img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+}
+.page-a-propos .text-apropos h2, .page-a-propos .text-apropos p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.page-a-propos .text-apropos p {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=page-a-propos.css.map */

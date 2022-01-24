@@ -1,0 +1,40 @@
+.container-find-one {
+    background-color: #c8d7cc;
+    padding-top: 3rem;
+
+    h2 {
+        margin: 0;
+    }
+
+    .title-cross-update {
+        display: flex;
+
+        i {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        #update-button {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        #delete-button {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .text-find-one {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+
+    .firstpart-contact {
+        padding-top: 4rem;
+
+        h2 {
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+    }
+
+    .display-flex-contact {
+        display: flex;
+        justify-content: space-around;
+    }
+}

@@ -1,0 +1,33 @@
+// NAVBAR
+@import '_navbar.scss';
+
+// LANDING PAGE
+@import './landing-page/header';
+@import './landing-page/firstpart';
+@import './landing-page/form';
+@import './landing-page/footer';
+@import './landing-page/media';
+
+// CONTACT PAGE
+@import './contact-page/contact-page';
+@import './contact-page/media';
+
+// A PROPOS PAGE
+@import './page-apropos/page-a-propos.scss';
+@import './page-apropos/media';
+
+// CHRONIQUE PAGE
+@import './chronique-page/chronique';
+@import './chronique-page/media';
+
+// CLOSING
+@import './closing-page/closing';
+@import './closing-page/media';
+@import './closing-page/closing-academie';
+
+// FIND ONE ARTICLE
+@import './findOneArticle';
+
+// OEUVRE TOI
+@import './oeuvretoi-page/oeuvreToi';
+@import './oeuvretoi-page/media';

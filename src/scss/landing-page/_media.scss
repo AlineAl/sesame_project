@@ -1,0 +1,365 @@
+@media (min-width: 320px) {
+
+    // HEADER
+    header {
+        h2 {
+            margin-top: 3rem;
+        }
+
+        button {
+            margin-left: 6.5rem;
+        }        
+    }
+
+    //FORM
+
+    .form-contact-landing {
+        .form-landing {
+            width: 18rem;
+            height: 28rem;
+            top: 16px;
+            left: 16px;
+        }        
+    }
+
+    //FOOTER
+}
+
+@media (min-width: 375px) {
+
+    // HEADER
+    header {
+        h2 {
+            margin-top: 4rem;
+        }
+
+        button {
+            margin-left: 8.5rem;
+        }        
+    }
+
+    //FORM
+
+    .form-contact-landing {
+        .form-landing {
+            width: 20rem;
+            height: 30rem;
+            top: 42px;
+            left: 28px;
+        }        
+    }
+}
+
+@media (min-width: 425px) {
+
+    // HEADER
+    header {
+        h2 {
+            margin-top: 6rem;
+        }
+
+        button {
+            margin-left: 10.5rem;
+        }        
+    }
+
+    //FORM
+
+    .form-contact-landing {
+        .form-landing {
+            width: 23rem;
+            height: 34rem;
+            top: 47px;
+            left: 28px;
+        }        
+    }
+}
+
+@media (min-width: 768px) {
+
+    //NAVBAR
+    .navbar {
+        display: none;
+    }
+
+    .navbar-desktop {
+        display: flex;
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        ul {
+            li {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    //HEADER 
+    header {
+        position: relative;
+
+        .text-header {
+            margin-right: 2rem;
+        }
+
+        h2 {
+            text-align: justify;
+            font-size: 2rem;
+            margin-top: 4rem;
+        }
+
+        img {
+            display: inline-block;
+            width: 15rem;
+            margin-right: 4rem;
+            margin-top: 3.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cadre-img-header {
+            width: 18rem;
+            height: 26rem;
+            margin-right: 2rem;
+            background-color: rgba(223, 223, 186, 0.4);
+            position: absolute;
+            top: 34px;
+            right: 8px;
+        }
+
+        button {
+            margin-left: 2rem;
+        }
+    }
+
+    //FIRSTPART LANDING
+
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            width: 14rem;
+            height: 20rem;
+            right: 29.5rem;
+            top: -2rem;
+            font-size: 1.7rem;
+        }
+        
+        .p-firstpart-2 {
+            width: 15rem;
+            left: 28.5rem;
+            bottom: -2rem;           
+        }
+    }
+
+    //FORM
+
+    .hr-display {
+        display: block;
+        width: 30rem;
+    }
+
+    .form-contact-landing {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        img {
+            width: 50%;
+            margin-left: 2rem;
+        }
+
+        .form-landing {
+            width: 32rem;
+            top: 16px;
+            left: 14rem;
+
+            p {
+                margin-top: 3rem;
+            }
+        }
+    }
+
+    //FOOTER 
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        .address-footer {
+            .img-media-footer {
+                display: none;
+            }
+        }
+    
+        .img-media {
+            position: relative;
+    
+            img {
+                display: inline-block;
+                width: 15rem;
+                position: absolute;
+                top: -9rem;
+                left: -2.5rem;
+            }        
+        }
+
+        .mentions-footer {
+            margin-top: 6rem;
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+    // NAVBAR 
+
+    .navbar-desktop {
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        ul {
+            li {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    //FIRSTPART LANDING
+
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            right: 39.5rem;
+            top: -2rem;
+            font-size: 1.7rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 38.5rem;
+            bottom: -2rem;           
+        }
+    }
+
+    //FORM
+
+    .form-contact-landing {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        img {
+            width: 26rem;
+            margin-left: 4rem;
+        }
+
+        .form-landing {
+            width: 40rem;
+            top: 40px;
+            left: 20rem;
+
+            p {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .navbar-desktop {
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        ul {
+            li {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    //HEADER
+
+    header {
+
+        .text-header {
+            margin-left: 4rem;
+            margin-right: 6rem;
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        img {
+            width: 20rem;
+            margin-right: 6rem;
+        }
+
+        .cadre-img-header {
+            width: 23rem;
+            height: 34rem;
+            top: 32px;
+            right: 8px;
+            margin-right: 4rem;
+
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    }
+    //FIRSTPART LANDING
+
+    .first-part-landing-page {
+
+        .img-first-photo {
+            img {
+                width: 400px;                
+            }
+        }
+
+        .p-firstpart-1 {
+            right: 54.5rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 54.5rem;         
+        }
+    }
+
+    //FORM
+
+    .form-contact-landing {
+
+        img {
+            width: 30rem;
+        }
+
+        .form-landing {
+            width: 65rem;
+            top: 5.5rem;
+            left: 20rem;
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        input, textarea {
+            padding: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .button-contact-landing {
+            font-size: 1.3rem;
+        }
+    }
+}

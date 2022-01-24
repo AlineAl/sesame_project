@@ -1,0 +1,867 @@
+@media (min-width: 366px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 5rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 372px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 5.5rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 9.3rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) {
+    .page-closing {
+        ul {
+            top: 4rem;
+            left: 0.8rem;
+        }
+
+        .list-closing-academie {
+            ul {
+                left: 6.5rem;
+            }
+
+            #li-academie {
+                margin-top: 3rem;
+            }
+
+            li {
+                margin-top: 3.5rem;
+            }
+        }
+
+        .display-temoignages {
+            width: 18rem;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .page-closing {
+        ul {
+            top: 3.6rem;
+            left: 2.4rem;
+        }
+
+        .list-closing {
+            ul {
+                left: 11rem;
+            }
+        }
+
+        .list-closing-academie {
+            ul {
+                left: 7rem;
+            }
+
+            #li-academie {
+                margin-top: 5rem;
+            }
+
+            li {
+                margin-top: 4rem;
+            }
+        }
+
+        .display-temoignages {
+            width: 20rem;
+        }
+    }
+}
+
+@media (min-width: 451px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 8rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 12rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 465px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 8.3rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 12rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 509px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 9.5rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 13.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 625px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 12.5rem;
+
+                li {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 17rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 677px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 14.5rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 19rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 739px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 16.3rem;
+            }
+        }
+
+        .list-closing {
+            ul {
+                left: 20.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .page-closing {
+        .first-part-closing {
+            display: flex;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 0.2rem;
+        }
+
+        ul {
+            position: relative;
+            margin-right: 5rem;
+        }
+
+        .list-closing {
+            position: relative;
+
+            .cadre-white {
+                background-color: #ffffff;
+                width: 18rem;
+                height: 18rem;
+                position: absolute;
+                top: 10rem;
+                left: 4rem;
+                transform: rotate(45deg);
+            }
+
+            ul {
+                left: 10.5rem;
+                top: 2rem;
+            }
+        }
+
+        .list-closing-academie {
+            position: relative;
+            width: 100%;
+            margin-top: 3rem;
+
+            .cadre-white {
+                position: absolute;
+                background-color: #ffffff;
+                width: 18rem;
+                height: 18rem;
+                top: 8rem;
+                left: 4.5rem;
+                transform: rotate(45deg);
+            }
+
+            ul {
+                top: 0.6rem;
+                margin: 0;
+                left: 6.3rem;
+            }
+
+            li {
+                margin-top: 4rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        #image-academie {
+            margin-left: 1rem;
+        }
+
+        img {
+            opacity: 1;
+            display: inline-block;
+            margin-left: 1rem;
+            width: 20rem;
+        }
+
+        .articles-closing {
+            margin-left: 1rem;
+
+            h3 {
+                text-align: justify;
+                margin: auto;
+            }
+
+            .markdown-academie {
+                text-align: justify;
+                margin: auto;
+            }
+        }
+
+        .display-flex-temoignage {
+            display: flex;
+            position: relative;
+            margin-top: 1rem;
+        }
+
+        .display-temoignages {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            width: 26rem;
+            height: 26rem;
+
+            #img-quotes {
+                width: 3rem;
+                margin-top: 3rem;
+            }
+
+            .carousel-temoignages {
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .temoignages {
+            .img-temoignage {
+                display: flex;
+                margin-left: 2rem;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 834px) {
+    .page-closing {
+        .list-closing-academie {
+            .cadre-white {
+                left: 6rem;
+            }
+
+            ul {
+                left: 7.5rem;
+            }
+        }
+
+        .list-closing {
+            .cadre-white {
+                left: 6.5rem;
+            }
+
+            ul {
+                left: 13rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 4rem;
+        }
+
+        .temoignages {
+            .img-temoignage {
+                margin-left: 3rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 866px) {
+    .page-closing {
+        .list-closing-academie {
+            .cadre-white {
+                left: 6.5rem;
+            }
+
+            ul {
+                left: 8rem;
+            }
+        }
+
+        .list-closing {
+            .cadre-white {
+                left: 7rem;
+            }
+
+            ul {
+                left: 14rem;
+            }
+        }
+
+        img {
+            margin-left: 2rem;
+        }
+
+        .display-temoignages {
+            right: 5rem;
+        }
+
+        .temoignages {
+            .img-temoignage {
+                margin-left: 4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 906px) {
+    .page-closing {
+        .list-closing-academie {
+            .cadre-white {
+                left: 8.5rem;
+            }
+
+            ul {
+                left: 10rem;
+            }
+        }
+
+        .list-closing {
+            .cadre-white {
+                left: 8rem;
+            }
+
+            ul {
+                left: 15rem;
+            }
+        }
+
+        img {
+            margin-left: 2.3rem;
+        }
+
+        .display-temoignages {
+            right: 6rem;
+        }
+
+        .temoignages {
+            .img-temoignage {
+                margin-left: 5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 958px) {
+    .page-closing {
+        .list-closing-academie {
+            .cadre-white {
+                left: 9.5rem;
+            }
+
+            ul {
+                left: 11rem;
+            }
+        }
+
+        .list-closing {
+            .cadre-white {
+                left: 9rem;
+            }
+
+            ul {
+                left: 16rem;
+            }
+        }
+
+        img {
+            margin-left: 3rem;
+        }
+
+        .display-temoignages {
+            right: 8rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 7rem;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 968px) {
+    .page-closing {
+        .list-closing-academie {
+            ul {
+                left: 11.3rem;
+            }
+        }
+
+        .list-closing {
+            .cadre-white {
+                left: 10rem;
+            }
+
+            ul {
+                left: 17rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 8rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 7rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-closing {
+        ul {
+            position: relative;
+            margin-right: 5rem;
+        }
+
+        h2 {
+            font-size: 2.1rem;
+        }
+
+        .img-title-closing {
+            width: 85%;
+        }
+
+        .list-closing {
+            .cadre-white {
+                width: 23rem;
+                height: 23rem;
+                top: 10rem;
+                left: 7rem;
+            }
+
+            ul {
+                left: 16rem;
+
+                li {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .list-closing-academie {
+
+            ul {
+                top: 1rem;
+                margin-left: 2.5rem;
+            }
+
+            .cadre-white {
+                width: 23rem;
+                height: 23rem;
+                top: 8rem;
+                left: 3rem;
+            }
+
+            ul {
+                left: 5rem;
+            }
+
+            li {
+                margin-top: 5rem;
+            }
+        }
+
+        img {
+            width: 24rem;
+        }
+
+        .articles-closing {
+            margin-top: 4rem;
+        }
+
+        .display-temoignages {
+            top: 2rem;
+            right: 6rem;
+            width: 30rem;
+            height: 30rem;        
+
+            #img-quotes {
+                width: 3rem;
+                margin-top: 3rem;
+            }
+
+            .carousel-temoignages {
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .temoignages {
+            .img-temoignage {
+                margin-left: 6rem;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1092px) {
+    .page-closing {
+        .list-closing {
+            .cadre-white {
+                left: 9rem;
+            }
+
+            ul {
+                left: 18rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 9rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 8rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1154px) {
+    .page-closing {
+        .list-closing {
+            .cadre-white {
+                left: 11rem;
+            }
+
+            ul {
+                left: 20rem;
+            }
+        }
+
+        #image-academie {
+            margin-left: 4rem;
+        }
+
+        .list-closing-academie {
+            ul {
+                left: 6.5rem;
+            }
+
+            .cadre-white {
+                left: 4.5rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 10rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 9rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1228px) {
+    .page-closing {
+        .list-closing {
+            .cadre-white {
+                left: 12rem;
+            }
+
+            ul {
+                left: 21rem;
+            }
+        }
+
+        img {
+            margin-left: 5rem;
+        }
+
+        #image-academie {
+            margin-left: 5rem;
+        }
+        
+        .list-closing-academie {
+            ul {
+                left: 8rem;
+            }
+
+            .cadre-white {
+                left: 6rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 12rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 11rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1292px) {
+    .page-closing {
+        .list-closing {
+            .cadre-white {
+                left: 13rem;
+            }
+
+            ul {
+                left: 22rem;
+            }
+        }
+
+        img {
+            margin-left: 6.5rem;
+        }
+
+        #image-academie {
+            margin-left: 6.5rem;
+        }
+        
+        .list-closing-academie {
+            ul {
+                left: 9rem;
+            }
+
+            .cadre-white {
+                left: 7rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 15rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 14rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .page-closing {
+        .list-closing {
+            .cadre-white {
+                left: 15rem;
+            }
+
+            ul {
+                left: 24rem;
+            }
+        }
+
+        .list-closing-academie {
+            ul {
+                left: 10rem;
+            }
+
+            .cadre-white {
+                left: 8rem;
+            }
+        }
+
+        .display-temoignages {
+            right: 18rem;
+        }
+    
+        .temoignages {
+            .img-temoignage {
+                margin-left: 17rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .page-closing {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .img-title-closing {
+            width: 100%;
+
+            img {
+                width: 34rem;
+            }
+        }
+
+        li {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-left: 5rem;
+        }
+
+        .list-closing {
+            .cadre-white {
+                width: 30rem;
+                height: 30rem;
+                top: 11rem;
+                left: 12.5rem;
+            }
+
+            ul {
+                li {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .list-closing-academie {
+            .cadre-white {
+                width: 30rem;
+                height: 30rem;
+                top: 11.5rem;
+                left: 5.5rem;
+            }
+
+            ul {
+                left: 8rem;
+
+                li {
+                    margin-top: 7rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        img {
+            width: 28rem;
+        }
+
+        .articles-closing {   
+            h3 {
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        .temoignages {
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .display-temoignages {
+            top: 2rem;
+            right: 13rem;
+            width: 36rem;
+            height: 36rem;        
+
+            #img-quotes {
+                width: 3rem;
+                margin-top: 3rem;
+            }
+
+            .carousel-temoignages {
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .temoignages {
+            .img-temoignage {
+                margin-left: 14rem;
+            }
+
+        }
+    }
+}

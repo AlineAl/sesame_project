@@ -1,0 +1,37 @@
+header {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+
+    img {
+        display: none;
+    }
+
+    h2, p {
+        color: white;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 3rem;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    button {
+        margin-left: 7rem;
+        margin-top: 1.5rem;
+        padding: 0.6rem;
+        background-color: white;
+        border: none;
+    }
+
+}

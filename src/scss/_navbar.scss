@@ -1,0 +1,175 @@
+/* KEYFRAMES */
+
+@keyframes select-scale {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+@keyframes effect-navbar-media {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      
+      80% {
+        transform: scale(1.07);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .logo-sesame {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .icon-navbar i {
+        margin-right: 1rem;
+        font-size: 2rem;
+        margin-top: 0.7rem;
+        
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.list-navbar-media {
+    display: none;
+    position: fixed;
+    z-index: 40;
+    width: 100%;
+    background-color: #ffff;
+    animation: effect-navbar-media 600ms ease-in-out forwards;
+
+    &-1 {
+        transform-origin: top center;
+        animation: effect-navbar-media 700ms ease-in-out forwards;  
+    }
+
+    &-2 {
+        transform-origin: top center;
+        animation: effect-navbar-media 760ms ease-in-out forwards;  
+    }
+
+    &-3 {
+        transform-origin: top center;
+        animation: effect-navbar-media 820ms ease-in-out forwards;  
+    }
+
+    &-4 {
+        transform-origin: top center;
+        animation: effect-navbar-media 880ms ease-in-out forwards;  
+    }
+
+    &-5 {
+        transform-origin: top center;
+        animation: effect-navbar-media 940ms ease-in-out forwards;  
+    }
+
+    &-6 {
+        transform-origin: top center;
+        animation: effect-navbar-media 1000ms ease-in-out forwards;  
+    }
+    
+    ul {
+        padding: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        margin: 0;
+
+        li {
+            list-style: none;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.navbar-desktop {
+    display: none;
+    justify-content: space-between;
+
+    .logo-sesame {
+        margin-left: 1rem;
+
+        h1:hover {
+            color: #184426;
+        }
+    }
+
+    #closing-list-nav {
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        margin-top: 1.5rem;
+        margin-right: 0.1rem;
+
+        li {
+            list-style: none;
+            margin-right: 1.4rem;
+
+            &:hover {
+                color: #184426;
+            }
+        }
+
+    }
+
+    .select-navbar {
+        display: none;
+        background-color: white;
+        position: fixed;
+        z-index: 40;
+        padding: 1rem;
+        animation: select-scale 700ms ease-in-out;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            animation: select-scale 700ms ease-in-out;
+        }
+    
+        ul li {
+            list-style: none;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+        margin: 0;
+    }
+
+}
