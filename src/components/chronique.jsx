@@ -3,51 +3,23 @@ import ReactMarkdown from 'react-markdown';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import Carousel from 'react-elastic-carousel';
-import carouselImage from '../images/ana-frantz-azRS34AdaaM-unsplash.jpg';
 import articlePrincipal from '../images/xps-8pb7Hq539Zw-unsplash.jpg';
-import articleDetails from '../images/devin-avery-BRVqq2uak4E-unsplash.jpg';
 
 function Chronique() {
     const [isLoading, setIsLoading] = useState(true);
     const [articles, setArticles] = useState([]);
-
-    const [articleChronique, setArticleChronique] = useState({});
-
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-chroniques', {
-                data: {
-                    titleChronique: articleChronique.titleChronique,
-                    contentChronique: articleChronique.contentChronique,               
-                }
-                })
-                console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-    
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticleChronique({
-            ...articleChronique,
-            [name]: value,
-        })
-    } 
     
     useEffect(() => {
         GetArticlesChronique();
     },[])
 
     function GetArticlesChronique() {
-        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-chroniques')
+        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-chroniques?populate=*')
         .then((response) => {
             setIsLoading(false);
             setArticles(response.data.data);
-            console.log(response.data.data)
+            // console.log(response.data.data)
+            // console.log(response.data.data[0].attributes.imageChronique.data[0].attributes.url)
         })
         .catch(error => {
             console.log(error);
@@ -79,7 +51,7 @@ function Chronique() {
             <nav>
                 <div className="navbar">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div className="icon-navbar" onClick={displayListNavBarMedia}>
                         <i class="fas fa-bars"></i>
@@ -97,7 +69,7 @@ function Chronique() {
                 </div>
                 <div className="navbar-desktop">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div>
                         <ul>
@@ -125,7 +97,6 @@ function Chronique() {
                         <h1>Chronicle Lifestyle</h1>
                         <img src={articlePrincipal} alt="image qui illustre le dernier article" />
                     </div>
-                    <hr className="display-hr" />
 
                     {/* HORIZONTAL CAROUSEL */}
                     <div className="horizontal-carousel-chronique">
@@ -136,7 +107,7 @@ function Chronique() {
                                 <a href={`#${article.attributes.titleChronique}`}>
                                     <div className="card-vertical" id="card-vertical-2">
                                         <div>
-                                            <img className="img-vertical-carousel" src={carouselImage} alt="" />
+                                            <img className="img-vertical-carousel" src={"https://sesameoeuvretoiadmin.herokuapp.com" + article.attributes.imageChronique.data[0].attributes.url} alt="" />
                                         </div>
                                         <div className="text-vertical">
                                             <h3>{article.attributes.titleChronique}</h3>
@@ -158,7 +129,7 @@ function Chronique() {
                                 <a href={`#${article.attributes.titleChronique}`}>
                                     <div key={article.id} className="card-vertical" id="card-vertical-2">
                                         <div>
-                                            <img className="img-vertical-carousel" src={carouselImage} alt="" />
+                                            <img className="img-vertical-carousel" src={"https://sesameoeuvretoiadmin.herokuapp.com" + article.attributes.imageChronique.data[0].attributes.url} alt="" />
                                         </div>
                                         <div className="text-vertical">
                                             <h3>{article.attributes.titleChronique}</h3>
@@ -175,21 +146,14 @@ function Chronique() {
                 <hr className="display-hr" />
                 <hr className="display-hr-media"/>
 
-                <form onSubmit={handleSubmit}>
-                    <label>Titre</label>
-                    <input type="text" id="titleChronique" name="titleChronique" onChange={handleChange} />
-                    <label>Contenu</label>
-                    <textarea type="text" id="contentChronique" name="contentChronique" onChange={handleChange} />
-                    <input type="submit" value="Envoyer" class="submit-form" />
-                </form>
-
                 {
                     isLoading ? "Loading..." : 
-                    articles.map((article) =>
+                    articles.map((article, i) =>
                     <Link to={`/chronique/${article.id}`}>
                         <section className="article-details">
+                            <p className="date-chronique">{article.attributes.dateChronique}</p>
                             <h3 id={article.attributes.titleChronique}>{article.attributes.titleChronique}</h3>
-                            <img src={articleDetails} alt="image qui illustre le détail de l'article" />
+                            <img src={"https://sesameoeuvretoiadmin.herokuapp.com" + article.attributes.imageChronique.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
                             <ReactMarkdown>{article.attributes.contentChronique}</ReactMarkdown>
                         </section>
                     </Link>

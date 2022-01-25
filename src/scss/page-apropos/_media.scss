@@ -1,31 +1,55 @@
 @media (min-width: 768px) {
     .page-a-propos {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        height: 110vh;
 
-        .text-apropos {
-            margin-left: 1rem;
-            margin-right: 0.6rem;
+        div {
+            grid-column: 2;
+
+            img {
+                width: 20rem;
+            }
         }
 
-        img {
-            width: 90%;
-            height: 100%;
-            margin-right: 1rem;
+        .text-apropos {
+            grid-column: 1;
+            padding-bottom: 2rem;
+
+            h2 {
+                font-size: 1.3rem;
+                font-style: italic;
+                margin-top: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }
 
 @media (min-width: 1024px) {
     .page-a-propos {
-        h1 {
-            margin-left: 4rem;
-        }
+        div {
+            img {
+                width: 25rem;
+            }
+        } 
 
         .text-apropos {
-            margin-left: 2rem;
-            margin-right: 2rem;
+            margin-top: 1rem;
+            margin-right: 0;
+
+            h2 {
+                font-size: 1.3rem;
+                font-style: italic;
+            }
+
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -33,14 +57,26 @@
 @media (min-width: 1440px) {
     .page-a-propos {
         h1 {
-            margin-left: 4rem;
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
+        div {
+            img {
+                width: 30rem;
+            }
+        } 
+
         .text-apropos {
-            margin-left: 2rem;
-            margin-right: 2rem;
-            font-size: 1.3rem;
+            width: 50rem;
+
+            h2 {
+                font-size: 1.5rem;
+                font-style: italic;
+            }
+
+            p {
+                font-size: 1.4rem;
+            }
         }
     }
 }

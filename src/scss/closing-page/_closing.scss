@@ -17,7 +17,7 @@
     }
     
     img {
-        width: 80%;
+        width: 15rem;
         margin: auto;
         display: flex;
         opacity: 0.2;
@@ -25,7 +25,6 @@
 
     .list-closing {
         ul {
-            text-align: center;
             position: absolute;
             top: 1rem;
             left: 7.5rem;
@@ -37,8 +36,9 @@
         ul {
             text-align: center;
             position: absolute;
-            top: 4rem;
-            left: 4rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 0;
         }
     }
@@ -60,24 +60,43 @@
     .articles-closing {
         padding-bottom: 2rem;
 
+        #img-academie-article {
+            display: flex;
+            margin: 0 auto;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        .date-academie {
+            border-bottom: 4px solid #034025;
+            width: 5.2rem;
+            display: flex;
+            margin: 0 auto;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-weight: lighter;
+        }
+
         ul {
             padding: 0;
         }
 
         h3 {
             text-align: center;
+            margin-left: 1rem;
+            margin-right: 1rem;
             margin: 0px;
             margin-top: 1rem;
             margin-bottom: 1rem;
             font-family: 'Philosopher', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
 
         .markdown-academie {
-            margin-left: 1rem;
-            margin-right: 1rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
             font-size: 1.1rem;
-            text-align: justify;
+            font-weight: lighter;
         }
     }
 }

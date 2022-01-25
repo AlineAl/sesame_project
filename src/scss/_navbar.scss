@@ -32,6 +32,10 @@
 
 /* NAVBAR */
 
+#navbar {
+    background-color: #ffff;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,9 +61,9 @@
 .list-navbar-media {
     display: none;
     position: fixed;
+    background-color: #ffff;
     z-index: 40;
     width: 100%;
-    background-color: #ffff;
     animation: effect-navbar-media 600ms ease-in-out forwards;
 
     &-1 {

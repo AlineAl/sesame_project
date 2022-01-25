@@ -212,6 +212,47 @@
 
 }
 
+@media (min-width: 866px) {
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            right: 34.5rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 33.5rem;         
+        }
+    }
+
+    // FORM
+    .form-contact-landing {
+        .form-landing {
+            width: 38rem;
+            top: 52px;
+        }
+    }
+}
+
+@media (min-width: 986px) {
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            right: 38.5rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 37.5rem;         
+        }
+    }
+
+    // FORM
+    .form-contact-landing {
+        .form-landing {
+            width: 46rem;
+            height: 38rem;
+            top: 68px;
+        }
+    }
+}
+
 @media (min-width: 1024px) {
     // NAVBAR 
 
@@ -257,12 +298,53 @@
 
         .form-landing {
             width: 40rem;
+            height: 34rem;
             top: 40px;
             left: 20rem;
 
             p {
                 margin-top: 3rem;
             }
+        }
+    }
+}
+
+@media (min-width: 1190px) {
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            right: 44.5rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 43.5rem;         
+        }
+    }
+
+    // FORM
+    .form-contact-landing {
+        .form-landing {
+            width: 50rem;
+            height: 34rem;
+            top: 38px;
+        }
+    }
+}
+
+@media (min-width: 1360px) {
+    .first-part-landing-page {
+        .p-firstpart-1 {
+            right: 49.5rem;
+        }
+        
+        .p-firstpart-2 {
+            left: 48.5rem;         
+        }
+    }
+
+    // FORM
+    .form-contact-landing {
+        .form-landing {
+            width: 60rem;
         }
     }
 }
@@ -284,6 +366,7 @@
     //HEADER
 
     header {
+        height: 100vh;
 
         .text-header {
             margin-left: 4rem;

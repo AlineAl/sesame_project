@@ -26,6 +26,10 @@
   }
 }
 /* NAVBAR */
+#navbar {
+  background-color: #ffff;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -47,9 +51,9 @@
 .list-navbar-media {
   display: none;
   position: fixed;
+  background-color: #ffff;
   z-index: 40;
   width: 100%;
-  background-color: #ffff;
   animation: effect-navbar-media 600ms ease-in-out forwards;
 }
 .list-navbar-media-1 {
@@ -457,6 +461,33 @@ header button {
     margin-top: 6rem;
   }
 }
+@media (min-width: 866px) {
+  .first-part-landing-page .p-firstpart-1 {
+    right: 34.5rem;
+  }
+  .first-part-landing-page .p-firstpart-2 {
+    left: 33.5rem;
+  }
+
+  .form-contact-landing .form-landing {
+    width: 38rem;
+    top: 52px;
+  }
+}
+@media (min-width: 986px) {
+  .first-part-landing-page .p-firstpart-1 {
+    right: 38.5rem;
+  }
+  .first-part-landing-page .p-firstpart-2 {
+    left: 37.5rem;
+  }
+
+  .form-contact-landing .form-landing {
+    width: 46rem;
+    height: 38rem;
+    top: 68px;
+  }
+}
 @media (min-width: 1024px) {
   .navbar-desktop h1 {
     font-size: 1.5rem;
@@ -486,11 +517,38 @@ header button {
   }
   .form-contact-landing .form-landing {
     width: 40rem;
+    height: 34rem;
     top: 40px;
     left: 20rem;
   }
   .form-contact-landing .form-landing p {
     margin-top: 3rem;
+  }
+}
+@media (min-width: 1190px) {
+  .first-part-landing-page .p-firstpart-1 {
+    right: 44.5rem;
+  }
+  .first-part-landing-page .p-firstpart-2 {
+    left: 43.5rem;
+  }
+
+  .form-contact-landing .form-landing {
+    width: 50rem;
+    height: 34rem;
+    top: 38px;
+  }
+}
+@media (min-width: 1360px) {
+  .first-part-landing-page .p-firstpart-1 {
+    right: 49.5rem;
+  }
+  .first-part-landing-page .p-firstpart-2 {
+    left: 48.5rem;
+  }
+
+  .form-contact-landing .form-landing {
+    width: 60rem;
   }
 }
 @media (min-width: 1440px) {
@@ -501,6 +559,9 @@ header button {
     font-size: 1.5rem;
   }
 
+  header {
+    height: 100vh;
+  }
   header .text-header {
     margin-left: 4rem;
     margin-right: 6rem;
@@ -584,73 +645,97 @@ header button {
     justify-content: space-around;
   }
 }
-.page-a-propos {
+.container-page-apropos {
   background-color: #C8D7CC;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
+
 .page-a-propos a {
   text-decoration: none;
   color: black;
 }
 .page-a-propos h1 {
-  margin: 0;
-  margin-top: 2rem;
-  margin-left: 1.3rem;
+  text-align: center;
   color: white;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .page-a-propos img {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  height: 24rem;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
   object-fit: cover;
 }
 .page-a-propos .text-apropos h2, .page-a-propos .text-apropos p {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+.page-a-propos .text-apropos h2 {
+  text-align: center;
 }
 .page-a-propos .text-apropos p {
-  text-align: justify;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
   .page-a-propos {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    height: 110vh;
+  }
+  .page-a-propos div {
+    grid-column: 2;
+  }
+  .page-a-propos div img {
+    width: 20rem;
   }
   .page-a-propos .text-apropos {
-    margin-left: 1rem;
-    margin-right: 0.6rem;
+    grid-column: 1;
+    padding-bottom: 2rem;
   }
-  .page-a-propos img {
-    width: 90%;
-    height: 100%;
-    margin-right: 1rem;
+  .page-a-propos .text-apropos h2 {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-top: 2rem;
+  }
+  .page-a-propos .text-apropos p {
+    font-size: 1rem;
   }
 }
 @media (min-width: 1024px) {
-  .page-a-propos h1 {
-    margin-left: 4rem;
+  .page-a-propos div img {
+    width: 25rem;
   }
   .page-a-propos .text-apropos {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+  .page-a-propos .text-apropos h2 {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  .page-a-propos .text-apropos p {
+    font-size: 1rem;
   }
 }
 @media (min-width: 1440px) {
   .page-a-propos h1 {
-    margin-left: 4rem;
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .page-a-propos div img {
+    width: 30rem;
   }
   .page-a-propos .text-apropos {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    font-size: 1.3rem;
+    width: 50rem;
+  }
+  .page-a-propos .text-apropos h2 {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+  .page-a-propos .text-apropos p {
+    font-size: 1.4rem;
   }
 }
 .chronique {
@@ -694,7 +779,7 @@ header button {
   color: black;
 }
 .cards-vertical-carousel img {
-  width: 20rem;
+  width: 100%;
   height: 6rem;
   object-fit: cover;
 }
@@ -745,7 +830,8 @@ hr {
 }
 .article-details h3 {
   text-align: center;
-  margin: 0px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .article-details h4 {
   text-align: center;
@@ -758,9 +844,16 @@ hr {
   width: 100%;
 }
 .article-details p {
-  text-align: justify;
+  text-align: left;
   padding: 1rem;
   margin: 0;
+}
+.article-details .date-chronique {
+  border-bottom: 4px solid #034025;
+  width: 5.8rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5rem;
 }
 
 .display-hr-media {
@@ -840,7 +933,7 @@ hr {
     margin-top: 2.5rem;
   }
   .article-details img {
-    width: 90%;
+    width: 40%;
     margin: auto;
     display: flex;
   }
@@ -850,7 +943,7 @@ hr {
   .article-details p {
     margin: auto;
     display: flex;
-    width: 90%;
+    width: 80%;
   }
 
   .display-hr-media {
@@ -900,13 +993,20 @@ hr {
     left: 14rem;
   }
 
+  .article-details .date-chronique {
+    font-size: 1rem;
+  }
+  .article-details h3 {
+    font-size: 1.5rem;
+  }
   .article-details img {
-    width: 70%;
+    width: 40%;
     margin: auto;
     display: flex;
   }
   .article-details p {
     width: 70%;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1440px) {
@@ -942,7 +1042,7 @@ hr {
   }
 
   .article-details img {
-    width: 60%;
+    width: 40%;
     margin: auto;
     display: flex;
   }
@@ -954,7 +1054,7 @@ hr {
   }
   .article-details p {
     width: 60%;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 .page-closing {
@@ -974,13 +1074,12 @@ hr {
   font-family: "Philosopher", sans-serif;
 }
 .page-closing img {
-  width: 80%;
+  width: 15rem;
   margin: auto;
   display: flex;
   opacity: 0.2;
 }
 .page-closing .list-closing ul {
-  text-align: center;
   position: absolute;
   top: 1rem;
   left: 7.5rem;
@@ -989,8 +1088,9 @@ hr {
 .page-closing .list-closing-academie ul {
   text-align: center;
   position: absolute;
-  top: 4rem;
-  left: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
 }
 .page-closing li {
@@ -1007,55 +1107,50 @@ hr {
 .page-closing .articles-closing {
   padding-bottom: 2rem;
 }
+.page-closing .articles-closing #img-academie-article {
+  display: flex;
+  margin: 0 auto;
+  opacity: 1;
+  margin-top: 1rem;
+}
+.page-closing .articles-closing .date-academie {
+  border-bottom: 4px solid #034025;
+  width: 5.2rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: lighter;
+}
 .page-closing .articles-closing ul {
   padding: 0;
 }
 .page-closing .articles-closing h3 {
   text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin: 0px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-family: "Philosopher", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 .page-closing .articles-closing .markdown-academie {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-size: 1.1rem;
-  text-align: justify;
+  font-weight: lighter;
 }
 
-@media (min-width: 366px) {
-  .page-closing .list-closing-academie ul {
-    left: 5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 9rem;
-  }
-}
-@media (min-width: 372px) {
-  .page-closing .list-closing-academie ul {
-    left: 5.5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 9.3rem;
-  }
-}
 @media (min-width: 375px) {
   .page-closing ul {
     top: 4rem;
     left: 0.8rem;
   }
-  .page-closing .list-closing-academie ul {
-    left: 6.5rem;
-  }
-  .page-closing .list-closing-academie #li-academie {
-    margin-top: 3rem;
-  }
-  .page-closing .list-closing-academie li {
-    margin-top: 3.5rem;
-  }
   .page-closing .display-temoignages {
+    width: 18rem;
+  }
+  .page-closing img {
     width: 18rem;
   }
 }
@@ -1067,81 +1162,21 @@ hr {
   .page-closing .list-closing ul {
     left: 11rem;
   }
-  .page-closing .list-closing-academie ul {
-    left: 7rem;
-  }
-  .page-closing .list-closing-academie #li-academie {
-    margin-top: 5rem;
-  }
-  .page-closing .list-closing-academie li {
-    margin-top: 4rem;
+  .page-closing img {
+    width: 22rem;
   }
   .page-closing .display-temoignages {
     width: 20rem;
   }
 }
-@media (min-width: 451px) {
-  .page-closing .list-closing-academie ul {
-    left: 8rem;
-  }
-  .page-closing .list-closing ul {
-    left: 12rem;
-  }
-}
-@media (min-width: 465px) {
-  .page-closing .list-closing-academie ul {
-    left: 8.3rem;
-  }
-  .page-closing .list-closing ul {
-    left: 12rem;
-  }
-}
-@media (min-width: 509px) {
-  .page-closing .list-closing-academie ul {
-    left: 9.5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 13.5rem;
-  }
-}
-@media (min-width: 625px) {
-  .page-closing .list-closing-academie ul {
-    left: 12.5rem;
-  }
-  .page-closing .list-closing-academie ul li {
-    font-size: 1.5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 17rem;
-  }
-}
-@media (min-width: 677px) {
-  .page-closing .list-closing-academie ul {
-    left: 14.5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 19rem;
-  }
-}
-@media (min-width: 739px) {
-  .page-closing .list-closing-academie ul {
-    left: 16.3rem;
-  }
-  .page-closing .list-closing ul {
-    left: 20.5rem;
-  }
-}
 @media (min-width: 768px) {
   .page-closing .first-part-closing {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .page-closing h2 {
-    font-size: 1.5rem;
-    margin-left: 0.2rem;
-  }
-  .page-closing ul {
-    position: relative;
-    margin-right: 5rem;
+    font-size: 1.4rem;
+    text-align: center;
   }
   .page-closing .list-closing {
     position: relative;
@@ -1159,48 +1194,39 @@ hr {
     left: 10.5rem;
     top: 2rem;
   }
-  .page-closing .list-closing-academie {
-    position: relative;
-    width: 100%;
-    margin-top: 3rem;
-  }
   .page-closing .list-closing-academie .cadre-white {
     position: absolute;
     background-color: #ffffff;
     width: 18rem;
     height: 18rem;
-    top: 8rem;
-    left: 4.5rem;
+    top: 28%;
+    left: 53%;
     transform: rotate(45deg);
   }
   .page-closing .list-closing-academie ul {
-    top: 0.6rem;
+    top: 28%;
+    left: 71%;
     margin: 0;
-    left: 6.3rem;
-  }
-  .page-closing .list-closing-academie li {
-    margin-top: 4rem;
-    margin-right: 0.5rem;
   }
   .page-closing #image-academie {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
   .page-closing img {
     opacity: 1;
-    display: inline-block;
-    margin-left: 1rem;
     width: 20rem;
   }
   .page-closing .articles-closing {
     margin-left: 1rem;
   }
+  .page-closing .articles-closing .date-academie {
+    margin-bottom: 1rem;
+  }
   .page-closing .articles-closing h3 {
-    text-align: justify;
     margin: auto;
   }
   .page-closing .articles-closing .markdown-academie {
-    text-align: justify;
     margin: auto;
+    width: 80%;
   }
   .page-closing .display-flex-temoignage {
     display: flex;
@@ -1227,12 +1253,6 @@ hr {
   }
 }
 @media (min-width: 834px) {
-  .page-closing .list-closing-academie .cadre-white {
-    left: 6rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 7.5rem;
-  }
   .page-closing .list-closing .cadre-white {
     left: 6.5rem;
   }
@@ -1247,12 +1267,6 @@ hr {
   }
 }
 @media (min-width: 866px) {
-  .page-closing .list-closing-academie .cadre-white {
-    left: 6.5rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 8rem;
-  }
   .page-closing .list-closing .cadre-white {
     left: 7rem;
   }
@@ -1270,17 +1284,14 @@ hr {
   }
 }
 @media (min-width: 906px) {
-  .page-closing .list-closing-academie .cadre-white {
-    left: 8.5rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 10rem;
-  }
   .page-closing .list-closing .cadre-white {
     left: 8rem;
   }
   .page-closing .list-closing ul {
     left: 15rem;
+  }
+  .page-closing .list-closing-academie ul {
+    left: 69%;
   }
   .page-closing img {
     margin-left: 2.3rem;
@@ -1293,12 +1304,6 @@ hr {
   }
 }
 @media (min-width: 958px) {
-  .page-closing .list-closing-academie .cadre-white {
-    left: 9.5rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 11rem;
-  }
   .page-closing .list-closing .cadre-white {
     left: 9rem;
   }
@@ -1316,9 +1321,6 @@ hr {
   }
 }
 @media (min-width: 968px) {
-  .page-closing .list-closing-academie ul {
-    left: 11.3rem;
-  }
   .page-closing .list-closing .cadre-white {
     left: 10rem;
   }
@@ -1356,26 +1358,18 @@ hr {
     font-size: 1.5rem;
   }
   .page-closing .list-closing-academie ul {
-    top: 1rem;
-    margin-left: 2.5rem;
+    left: 71%;
   }
   .page-closing .list-closing-academie .cadre-white {
     width: 23rem;
     height: 23rem;
-    top: 8rem;
-    left: 3rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 5rem;
-  }
-  .page-closing .list-closing-academie li {
-    margin-top: 5rem;
   }
   .page-closing img {
     width: 24rem;
   }
-  .page-closing .articles-closing {
-    margin-top: 4rem;
+  .page-closing .articles-closing li {
+    margin: 0;
+    margin-bottom: 4rem;
   }
   .page-closing .display-temoignages {
     top: 2rem;
@@ -1415,14 +1409,11 @@ hr {
   .page-closing .list-closing ul {
     left: 20rem;
   }
+  .page-closing .list-closing-academie ul {
+    left: 69%;
+  }
   .page-closing #image-academie {
     margin-left: 4rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 6.5rem;
-  }
-  .page-closing .list-closing-academie .cadre-white {
-    left: 4.5rem;
   }
   .page-closing .display-temoignages {
     right: 10rem;
@@ -1438,17 +1429,14 @@ hr {
   .page-closing .list-closing ul {
     left: 21rem;
   }
+  .page-closing .list-closing-academie ul {
+    left: 68%;
+  }
   .page-closing img {
     margin-left: 5rem;
   }
   .page-closing #image-academie {
     margin-left: 5rem;
-  }
-  .page-closing .list-closing-academie ul {
-    left: 8rem;
-  }
-  .page-closing .list-closing-academie .cadre-white {
-    left: 6rem;
   }
   .page-closing .display-temoignages {
     right: 12rem;
@@ -1470,12 +1458,6 @@ hr {
   .page-closing #image-academie {
     margin-left: 6.5rem;
   }
-  .page-closing .list-closing-academie ul {
-    left: 9rem;
-  }
-  .page-closing .list-closing-academie .cadre-white {
-    left: 7rem;
-  }
   .page-closing .display-temoignages {
     right: 15rem;
   }
@@ -1491,10 +1473,7 @@ hr {
     left: 24rem;
   }
   .page-closing .list-closing-academie ul {
-    left: 10rem;
-  }
-  .page-closing .list-closing-academie .cadre-white {
-    left: 8rem;
+    left: 67%;
   }
   .page-closing .display-temoignages {
     right: 18rem;
@@ -1534,18 +1513,20 @@ hr {
   .page-closing .list-closing-academie .cadre-white {
     width: 30rem;
     height: 30rem;
-    top: 11.5rem;
-    left: 5.5rem;
+    left: 54%;
   }
   .page-closing .list-closing-academie ul {
-    left: 8rem;
+    left: 70%;
   }
   .page-closing .list-closing-academie ul li {
-    margin-top: 7rem;
     font-size: 2rem;
   }
   .page-closing img {
     width: 28rem;
+  }
+  .page-closing .articles-closing .date-academie {
+    font-size: 1.2rem;
+    width: 6rem;
   }
   .page-closing .articles-closing h3 {
     font-size: 2rem;
@@ -1578,7 +1559,7 @@ hr {
 }
 
 .temoignages {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .temoignages h3 {
   text-align: center;
@@ -1587,7 +1568,6 @@ hr {
   padding-bottom: 1rem;
   font-size: 2rem;
   margin: 0;
-  margin-top: 2rem;
 }
 .temoignages .img-temoignage {
   display: none;

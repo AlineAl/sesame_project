@@ -8,7 +8,6 @@ import ClosingDecouvre from './components/closingjedecouvre';
 import ClosingAcademie from './components/closingacademie';
 import OeuvreToi from './components/oeuvretoi';
 import OneArticleAcademie from './components/displayOneArticleAcademie';
-import OneArticleApropos from './components/displayOneArticleApropos';
 import OneArticleDecouvre from './components/displayOneArticleDecouvre';
 import OneArticleChronique from './components/displayOneArticleChronique';
 import OneArticleTemoignage from './components/displayOneArticleTemoignage';
@@ -21,10 +20,9 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/home" element={<LandingPage />}></Route>
+          <Route path="/" element={<LandingPage />}></Route>
           <Route path="/contact" element={<ContactPage />}></Route>
           <Route path="/apropos" element={<APropos />}></Route>
-          <Route path="/apropos/:id" element={<OneArticleApropos />}></Route> 
           <Route path="/chronique" element={<ChroniquePage />}></Route>
           <Route path="/chronique/:id" element={<OneArticleChronique />}></Route>
           <Route path="/jedecouvre" element={<ClosingDecouvre />}></Route>

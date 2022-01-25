@@ -12,57 +12,13 @@ function ClosingAcademie() {
     const [isLoading, setIsLoading] = useState(true);
     const [articles, setArticles] = useState(null);
     const [temoignages, setTemoignages] = useState(null);
-    const [files,setFile] = useState(false);
-
-    const [articleAcademie, setArticleAcademie] = useState({});
-
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            const formData = new FormData()
-            formData.append('files', files);
-
-            await axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/upload', formData, {
-                headers: { 'Content-Type': 'multipart/form-data' },
-              });
-        } catch(error) {
-            console.log(error);
-        }
-
-        try {
-            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-academies', {
-                data: {
-                    titleAcademie: articleAcademie.titleAcademie,
-                    contentAcademie: articleAcademie.contentAcademie,
-                    imageAcademie: files.files                
-                }
-                })
-                console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-    
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticleAcademie({
-            ...articleAcademie,
-            [name]: value,
-        })
-        setFile({
-            ...files,
-            [name]: value
-        })
-    } 
-    
+  
     useEffect(() => {
         GetArticlesClosingAcademie();
     },[])
 
     function GetArticlesClosingAcademie() {
-        const axiosRequest1 = axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-academies');
+        const axiosRequest1 = axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-academies?populate=*');
         const axiosRequest2 = axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/temoignages');
         axios.all([axiosRequest1, axiosRequest2])
         .then(axios.spread(function(data1, data2) {
@@ -103,7 +59,7 @@ function ClosingAcademie() {
             <nav>
                 <div className="navbar">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div className="icon-navbar" onClick={displayListNavBarMedia}>
                         <i class="fas fa-bars"></i>
@@ -121,7 +77,7 @@ function ClosingAcademie() {
                 </div>
                 <div className="navbar-desktop">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div>
                         <ul>
@@ -153,7 +109,10 @@ function ClosingAcademie() {
                         <div className="cadre-white"></div>
                         <ul>
                         {
-                            isLoading ? 'Loading...' : articles.map(article => <a href={`#${article.attributes.titleAcademie}`}><li key={article.id}>{article.attributes.titleAcademie}</li></a>)
+                            isLoading ? 'Loading...' : articles.map(article => 
+                            <a href={`#${article.attributes.titleAcademie}`}>
+                                <li key={article.id}>{article.attributes.titleAcademie}</li>
+                            </a>)
                         }
                             <a href="#temoignages"><li>Témoignages</li></a>
                         </ul>
@@ -161,18 +120,17 @@ function ClosingAcademie() {
                 </section>
 
                 <section className="articles-closing">
-                <form onSubmit={handleSubmit}>
-                    <label>Image</label>
-                    <input type="file" id="image" name="imageAcademie" onChange={handleChange} />
-                    <label>Titre</label>
-                    <input type="text" id="title" name="titleAcademie" onChange={handleChange} />
-                    <label>Contenu</label>
-                    <textarea type="text" id="content" name="contentAcademie" onChange={handleChange} />
-                    <input type="submit" value="Envoyer" class="submit-form" />
-                </form>
                     <ul>
                         {
-                            isLoading ? 'Loading...' : articles.map((article) => <Link to={`/academie/${article.id}`}><li key={article.id}><h3 id={article.attributes.titleAcademie}>{article.attributes.titleAcademie}</h3><ReactMarkdown className="markdown-academie">{article.attributes.contentAcademie}</ReactMarkdown></li></Link>)
+                            isLoading ? 'Loading...' : articles.map((article) => 
+                            <Link to={`/academie/${article.id}`}>
+                                <li key={article.id}>
+                                    <p className="date-academie">{article.attributes.dateAcademie}</p>
+                                    <h3 id={article.attributes.titleAcademie}>{article.attributes.titleAcademie}</h3>
+                                    <img id="img-academie-article" src={"https://sesameoeuvretoiadmin.herokuapp.com" + article.attributes.imageAcademie.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
+                                    <ReactMarkdown className="markdown-academie">{article.attributes.contentAcademie}</ReactMarkdown>
+                                </li>
+                            </Link>)
                         }                                 
                     </ul>
                 </section>

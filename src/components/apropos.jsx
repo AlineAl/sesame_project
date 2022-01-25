@@ -6,33 +6,7 @@ import imgPropos from '../images/nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg';
 function Apropos() {
     const [isLoading, setIsLoading] = useState(true);
     const [articles, setArticles] = useState(null);
-    const [articleApropos, setArticleApropos] = useState({});
-
-    
-    const handleChangeApropos = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticleApropos({
-            ...articleApropos,
-            [name]: value,
-        })
-    } 
-    
-    const handleSubmitApropos = async (event) => {
-        event.preventDefault();
-
-        try {
-            const { data } = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-apropos', {
-                data: {
-                    titleApropos: articleApropos.titleApropos,
-                    contentApropos: articleApropos.contentApropos,              
-                }
-                })
-                console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-    
+ 
     useEffect(() => {
         GetArticlesApropos();
     },[])
@@ -70,11 +44,11 @@ function Apropos() {
     }
 
     return (
-        <div>
-            <nav>
+        <div className="container-page-apropos">
+            <nav id="navbar">
                 <div className="navbar">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div className="icon-navbar" onClick={displayListNavBarMedia}>
                         <i class="fas fa-bars"></i>
@@ -90,9 +64,9 @@ function Apropos() {
                         <Link to="/contact"><li className="list-navbar-media-6">Contact</li></Link>
                     </ul>              
                 </div>
-                <div className="navbar-desktop">
+                <div className="navbar-desktop" id="navbar">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div>
                         <ul>
@@ -122,22 +96,13 @@ function Apropos() {
                 {
                     isLoading ? 'Loading...' :
                     articles.map((article) =>
-                    <Link to={`/apropos/${article.id}`}>
                         <div className="text-apropos">
                             <h2>{article.attributes.titleApropos}</h2>
                             <p>{article.attributes.contentApropos}</p>             
                         </div>
-                    </Link>
                     )
                 }
             </section>
-            <form onSubmit={handleSubmitApropos}>
-            <label>Titre</label>
-                <input type="text" id="titleApropos" name="titleApropos" onChange={handleChangeApropos} />
-                <label>Contenu</label>
-                <textarea type="text" id="contentApropos" name="contentApropos" onChange={handleChangeApropos} />
-                <input type="submit" value="Envoyer" class="submit-form" />
-            </form>
         </div>
     )
 }

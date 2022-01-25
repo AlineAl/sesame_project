@@ -81,7 +81,7 @@ function DisplayOneArticleTemoignage() {
            <nav>
                 <div className="navbar">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div className="icon-navbar" onClick={displayListNavBarMedia}>
                         <i class="fas fa-bars"></i>
@@ -99,7 +99,7 @@ function DisplayOneArticleTemoignage() {
                 </div>
                 <div className="navbar-desktop">
                     <div className="logo-sesame">
-                        <Link to="/home"><h1>Sésame œuvre-toi</h1></Link>
+                        <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
                     </div>
                     <div>
                         <ul>
