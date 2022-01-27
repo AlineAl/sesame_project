@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import imgPropos from '../images/nishaan-ahmed-mDQM7TmmcD4-unsplash.jpg';
 
 function Apropos() {
     const [isLoading, setIsLoading] = useState(true);
@@ -12,7 +11,7 @@ function Apropos() {
     },[])
 
     function GetArticlesApropos() {
-        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-apropos')
+        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-apropos?populate=*')
         .then((data) => {
             setArticles(data.data.data);
             console.log(data.data.data);
@@ -88,18 +87,20 @@ function Apropos() {
                 </div>
             </nav>
 
-            <section className="page-a-propos">
-                <div>
-                    <h1>À propos de moi</h1>
-                    <img src={imgPropos} alt="" />                    
-                </div>
+            <section>
                 {
                     isLoading ? 'Loading...' :
                     articles.map((article) =>
+                    <div className="page-a-propos">
+                        <div>
+                            <h1>À propos de moi</h1>
+                            <img src={article.attributes.imageApropos.data[0].attributes.url} alt="image qui illustre le détail de l'article" />                   
+                        </div>
                         <div className="text-apropos">
                             <h2>{article.attributes.titleApropos}</h2>
                             <p>{article.attributes.contentApropos}</p>             
                         </div>
+                    </div>
                     )
                 }
             </section>

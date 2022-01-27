@@ -127,7 +127,7 @@ function ClosingAcademie() {
                                 <li key={article.id}>
                                     <p className="date-academie">{article.attributes.dateAcademie}</p>
                                     <h3 id={article.attributes.titleAcademie}>{article.attributes.titleAcademie}</h3>
-                                    <img id="img-academie-article" src={"https://sesameoeuvretoiadmin.herokuapp.com" + article.attributes.imageAcademie.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
+                                    <img id="img-academie-article" src={article.attributes.imageAcademie.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
                                     <ReactMarkdown className="markdown-academie">{article.attributes.contentAcademie}</ReactMarkdown>
                                 </li>
                             </Link>)

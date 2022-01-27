@@ -7,40 +7,13 @@ import imageClosing from '../images/nagy-arnold-X_IvVDuHvDQ-unsplash.jpg';
 function Closingjedecouvre() {
     const [isLoading, setIsLoading] = useState(true);
     const [articles, setArticles] = useState(null);
-
-    const [articleDecouvre, setArticleDecouvre] = useState({});
-
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-decouvres', {
-                data: {
-                    titleDecouvre: articleDecouvre.titleDecouvre,
-                    contentDecouvre: articleDecouvre.contentDecouvre,               
-                }
-                })
-                console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-    
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticleDecouvre({
-            ...articleDecouvre,
-            [name]: value,
-        })
-    } 
     
     useEffect(() => {
         GetArticlesDecouvre();
     },[])
 
     function GetArticlesDecouvre() {
-        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-decouvres')
+        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-decouvres?populate=*')
         .then((response) => {
             console.log(response)
             setArticles(response.data.data);
@@ -126,22 +99,25 @@ function Closingjedecouvre() {
                         <div className="cadre-white"></div>
                         <ul>
                         {
-                            isLoading ? 'Loading...' : articles.map(article => <a href={`#${article.attributes.titleDecouvre}`}><li key={article.id}>{article.attributes.titleDecouvre}</li></a>)
+                            isLoading ? 'Loading...' : articles.map(article => 
+                            <a href={`#${article.attributes.titleDecouvre}`}>
+                                <li key={article.id}>{article.attributes.titleDecouvre}</li>
+                            </a>)
                         }
                         </ul>
                     </div>
                 </section>
 
                 <section className="articles-closing">
-                    <form onSubmit={handleSubmit}>
-                        <label>Titre</label>
-                        <input type="text" id="titleDecouvre" name="titleDecouvre" onChange={handleChange} />
-                        <label>Contenu</label>
-                        <textarea type="text" id="contentDecouvre" name="contentDecouvre" onChange={handleChange} />
-                        <input type="submit" value="Envoyer" class="submit-form" />
-                    </form>
                     {
-                        isLoading ? 'Loading...' : articles.map((article) => <Link to={`/jedecouvre/${article.id}`}><li key={article.id}><h3 id={article.attributes.titleDecouvre}>{article.attributes.titleDecouvre}</h3><ReactMarkdown className="markdown-academie">{article.attributes.contentDecouvre}</ReactMarkdown></li></Link>)
+                        isLoading ? 'Loading...' : articles.map((article) => 
+                        <Link to={`/jedecouvre/${article.id}`}>
+                            <li key={article.id}>
+                                <h3 id={article.attributes.titleDecouvre}>{article.attributes.titleDecouvre}</h3>
+                                <img id='img-decouvre' src={article.attributes.imageDecouvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
+                                <ReactMarkdown className="markdown-academie">{article.attributes.contentDecouvre}</ReactMarkdown>
+                            </li>
+                        </Link>)
                     } 
                 </section>                
             </div>

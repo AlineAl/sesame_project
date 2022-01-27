@@ -1079,10 +1079,15 @@ hr {
   display: flex;
   opacity: 0.2;
 }
+.page-closing #img-decouvre {
+  opacity: 1;
+}
 .page-closing .list-closing ul {
+  text-align: center;
   position: absolute;
-  top: 1rem;
-  left: 7.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
 }
 .page-closing .list-closing-academie ul {
@@ -1143,10 +1148,6 @@ hr {
 }
 
 @media (min-width: 375px) {
-  .page-closing ul {
-    top: 4rem;
-    left: 0.8rem;
-  }
   .page-closing .display-temoignages {
     width: 18rem;
   }
@@ -1155,13 +1156,6 @@ hr {
   }
 }
 @media (min-width: 425px) {
-  .page-closing ul {
-    top: 3.6rem;
-    left: 2.4rem;
-  }
-  .page-closing .list-closing ul {
-    left: 11rem;
-  }
   .page-closing img {
     width: 22rem;
   }

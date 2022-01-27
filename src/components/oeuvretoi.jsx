@@ -19,7 +19,7 @@ function Oeuvretoi() {
         event.preventDefault();
 
         try {
-            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres', {
+            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres?populate=*', {
                 data: {
                     titleOeuvre: articleOeuvre.titleOeuvre,
                     contentOeuvre: articleOeuvre.contentOeuvre,               
@@ -145,6 +145,7 @@ function Oeuvretoi() {
                                             </div>
                                             <div className="text-vertical">
                                                 <h3>{article.attributes.titleOeuvre}</h3>
+                                                <img src={article.attributes.imageOeuvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
                                                 <ReactMarkdown>{article.attributes.contentOeuvre}</ReactMarkdown>
                                             </div>
                                         </div>
@@ -157,14 +158,6 @@ function Oeuvretoi() {
 
                 <hr className="display-hr" />
                 <hr className="display-hr-media"/>
-
-                <form onSubmit={handleSubmit}>
-                    <label>Titre</label>
-                    <input type="text" id="titleOeuvre" name="titleOeuvre" onChange={handleChange} />
-                    <label>Contenu</label>
-                    <textarea type="text" id="contentOeuvre" name="contentOeuvre" onChange={handleChange} />
-                    <input type="submit" value="Envoyer" class="submit-form" />
-                </form>
 
                 {
                     isLoading ? "Loading..." : 
