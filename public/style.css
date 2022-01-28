@@ -1176,17 +1176,18 @@ hr {
     position: relative;
   }
   .page-closing .list-closing .cadre-white {
+    position: absolute;
     background-color: #ffffff;
     width: 18rem;
     height: 18rem;
-    position: absolute;
-    top: 10rem;
-    left: 4rem;
+    top: 28%;
+    left: 6%;
     transform: rotate(45deg);
   }
   .page-closing .list-closing ul {
-    left: 10.5rem;
-    top: 2rem;
+    top: 28%;
+    left: 44%;
+    margin: 0;
   }
   .page-closing .list-closing-academie .cadre-white {
     position: absolute;
@@ -1217,6 +1218,8 @@ hr {
   }
   .page-closing .articles-closing h3 {
     margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   .page-closing .articles-closing .markdown-academie {
     margin: auto;
@@ -1247,12 +1250,6 @@ hr {
   }
 }
 @media (min-width: 834px) {
-  .page-closing .list-closing .cadre-white {
-    left: 6.5rem;
-  }
-  .page-closing .list-closing ul {
-    left: 13rem;
-  }
   .page-closing .display-temoignages {
     right: 4rem;
   }
@@ -1261,15 +1258,6 @@ hr {
   }
 }
 @media (min-width: 866px) {
-  .page-closing .list-closing .cadre-white {
-    left: 7rem;
-  }
-  .page-closing .list-closing ul {
-    left: 14rem;
-  }
-  .page-closing img {
-    margin-left: 2rem;
-  }
   .page-closing .display-temoignages {
     right: 5rem;
   }
@@ -1278,17 +1266,11 @@ hr {
   }
 }
 @media (min-width: 906px) {
-  .page-closing .list-closing .cadre-white {
-    left: 8rem;
-  }
   .page-closing .list-closing ul {
-    left: 15rem;
+    left: 37%;
   }
   .page-closing .list-closing-academie ul {
     left: 69%;
-  }
-  .page-closing img {
-    margin-left: 2.3rem;
   }
   .page-closing .display-temoignages {
     right: 6rem;
@@ -1298,15 +1280,6 @@ hr {
   }
 }
 @media (min-width: 958px) {
-  .page-closing .list-closing .cadre-white {
-    left: 9rem;
-  }
-  .page-closing .list-closing ul {
-    left: 16rem;
-  }
-  .page-closing img {
-    margin-left: 3rem;
-  }
   .page-closing .display-temoignages {
     right: 8rem;
   }
@@ -1315,12 +1288,6 @@ hr {
   }
 }
 @media (min-width: 968px) {
-  .page-closing .list-closing .cadre-white {
-    left: 10rem;
-  }
-  .page-closing .list-closing ul {
-    left: 17rem;
-  }
   .page-closing .display-temoignages {
     right: 8rem;
   }
@@ -1329,10 +1296,6 @@ hr {
   }
 }
 @media (min-width: 1024px) {
-  .page-closing ul {
-    position: relative;
-    margin-right: 5rem;
-  }
   .page-closing h2 {
     font-size: 2.1rem;
   }
@@ -1342,11 +1305,9 @@ hr {
   .page-closing .list-closing .cadre-white {
     width: 23rem;
     height: 23rem;
-    top: 10rem;
-    left: 7rem;
   }
   .page-closing .list-closing ul {
-    left: 16rem;
+    left: 43%;
   }
   .page-closing .list-closing ul li {
     font-size: 1.5rem;
@@ -1360,6 +1321,9 @@ hr {
   }
   .page-closing img {
     width: 24rem;
+  }
+  .page-closing .articles-closing {
+    margin-top: 6rem;
   }
   .page-closing .articles-closing li {
     margin: 0;
@@ -1383,12 +1347,6 @@ hr {
   }
 }
 @media (min-width: 1092px) {
-  .page-closing .list-closing .cadre-white {
-    left: 9rem;
-  }
-  .page-closing .list-closing ul {
-    left: 18rem;
-  }
   .page-closing .display-temoignages {
     right: 9rem;
   }
@@ -1397,11 +1355,8 @@ hr {
   }
 }
 @media (min-width: 1154px) {
-  .page-closing .list-closing .cadre-white {
-    left: 11rem;
-  }
   .page-closing .list-closing ul {
-    left: 20rem;
+    left: 37%;
   }
   .page-closing .list-closing-academie ul {
     left: 69%;
@@ -1417,17 +1372,11 @@ hr {
   }
 }
 @media (min-width: 1228px) {
-  .page-closing .list-closing .cadre-white {
-    left: 12rem;
-  }
   .page-closing .list-closing ul {
-    left: 21rem;
+    left: 36%;
   }
   .page-closing .list-closing-academie ul {
     left: 68%;
-  }
-  .page-closing img {
-    margin-left: 5rem;
   }
   .page-closing #image-academie {
     margin-left: 5rem;
@@ -1440,15 +1389,6 @@ hr {
   }
 }
 @media (min-width: 1292px) {
-  .page-closing .list-closing .cadre-white {
-    left: 13rem;
-  }
-  .page-closing .list-closing ul {
-    left: 22rem;
-  }
-  .page-closing img {
-    margin-left: 6.5rem;
-  }
   .page-closing #image-academie {
     margin-left: 6.5rem;
   }
@@ -1460,11 +1400,8 @@ hr {
   }
 }
 @media (min-width: 1400px) {
-  .page-closing .list-closing .cadre-white {
-    left: 15rem;
-  }
   .page-closing .list-closing ul {
-    left: 24rem;
+    left: 33%;
   }
   .page-closing .list-closing-academie ul {
     left: 67%;
@@ -1498,8 +1435,10 @@ hr {
   .page-closing .list-closing .cadre-white {
     width: 30rem;
     height: 30rem;
-    top: 11rem;
-    left: 12.5rem;
+    top: 25%;
+  }
+  .page-closing .list-closing ul {
+    left: 39%;
   }
   .page-closing .list-closing ul li {
     font-size: 2rem;

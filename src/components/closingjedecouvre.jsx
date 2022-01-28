@@ -113,6 +113,7 @@ function Closingjedecouvre() {
                         isLoading ? 'Loading...' : articles.map((article) => 
                         <Link to={`/jedecouvre/${article.id}`}>
                             <li key={article.id}>
+                            <p className="date-academie">{article.attributes.dateDecouvre}</p>
                                 <h3 id={article.attributes.titleDecouvre}>{article.attributes.titleDecouvre}</h3>
                                 <img id='img-decouvre' src={article.attributes.imageDecouvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
                                 <ReactMarkdown className="markdown-academie">{article.attributes.contentDecouvre}</ReactMarkdown>

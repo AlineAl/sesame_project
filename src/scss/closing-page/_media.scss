@@ -38,18 +38,19 @@
             position: relative;
 
             .cadre-white {
+                position: absolute;
                 background-color: #ffffff;
                 width: 18rem;
                 height: 18rem;
-                position: absolute;
-                top: 10rem;
-                left: 4rem;
+                top: 28%;
+                left: 6%;
                 transform: rotate(45deg);
             }
 
             ul {
-                left: 10.5rem;
-                top: 2rem;
+                top: 28%;
+                left: 44%;
+                margin: 0;
             }
         }
 
@@ -89,6 +90,8 @@
 
             h3 {
                 margin: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
             }
 
             .markdown-academie {
@@ -134,17 +137,6 @@
 
 @media (min-width: 834px) {
     .page-closing {
-
-        .list-closing {
-            .cadre-white {
-                left: 6.5rem;
-            }
-
-            ul {
-                left: 13rem;
-            }
-        }
-
         .display-temoignages {
             right: 4rem;
         }
@@ -159,21 +151,6 @@
 
 @media (min-width: 866px) {
     .page-closing {
-
-        .list-closing {
-            .cadre-white {
-                left: 7rem;
-            }
-
-            ul {
-                left: 14rem;
-            }
-        }
-
-        img {
-            margin-left: 2rem;
-        }
-
         .display-temoignages {
             right: 5rem;
         }
@@ -188,14 +165,9 @@
 
 @media (min-width: 906px) {
     .page-closing {
-
         .list-closing {
-            .cadre-white {
-                left: 8rem;
-            }
-
             ul {
-                left: 15rem;
+               left: 37%; 
             }
         }
 
@@ -203,10 +175,6 @@
             ul {
                 left: 69%;
             }
-        }
-
-        img {
-            margin-left: 2.3rem;
         }
 
         .display-temoignages {
@@ -223,21 +191,6 @@
 
 @media (min-width: 958px) {
     .page-closing {
-
-        .list-closing {
-            .cadre-white {
-                left: 9rem;
-            }
-
-            ul {
-                left: 16rem;
-            }
-        }
-
-        img {
-            margin-left: 3rem;
-        }
-
         .display-temoignages {
             right: 8rem;
         }
@@ -253,17 +206,6 @@
 
 @media (min-width: 968px) {
     .page-closing {
-
-        .list-closing {
-            .cadre-white {
-                left: 10rem;
-            }
-
-            ul {
-                left: 17rem;
-            }
-        }
-
         .display-temoignages {
             right: 8rem;
         }
@@ -278,11 +220,6 @@
 
 @media (min-width: 1024px) {
     .page-closing {
-        ul {
-            position: relative;
-            margin-right: 5rem;
-        }
-
         h2 {
             font-size: 2.1rem;
         }
@@ -295,12 +232,10 @@
             .cadre-white {
                 width: 23rem;
                 height: 23rem;
-                top: 10rem;
-                left: 7rem;
             }
 
             ul {
-                left: 16rem;
+                left: 43%;
 
                 li {
                     font-size: 1.5rem;
@@ -324,6 +259,8 @@
         }
 
         .articles-closing {
+            margin-top: 6rem;
+
             li {
                 margin: 0;
                 margin-bottom: 4rem;
@@ -352,23 +289,12 @@
             .img-temoignage {
                 margin-left: 6rem;
             }
-
         }
     }
 }
 
 @media (min-width: 1092px) {
     .page-closing {
-        .list-closing {
-            .cadre-white {
-                left: 9rem;
-            }
-
-            ul {
-                left: 18rem;
-            }
-        }
-
         .display-temoignages {
             right: 9rem;
         }
@@ -384,12 +310,8 @@
 @media (min-width: 1154px) {
     .page-closing {
         .list-closing {
-            .cadre-white {
-                left: 11rem;
-            }
-
             ul {
-                left: 20rem;
+                left: 37%;
             }
         }
 
@@ -418,12 +340,8 @@
 @media (min-width: 1228px) {
     .page-closing {
         .list-closing {
-            .cadre-white {
-                left: 12rem;
-            }
-
             ul {
-                left: 21rem;
+                left: 36%;
             }
         }
 
@@ -431,10 +349,6 @@
             ul {
                 left: 68%;
             }
-        }
-
-        img {
-            margin-left: 5rem;
         }
 
         #image-academie {
@@ -455,20 +369,6 @@
 
 @media (min-width: 1292px) {
     .page-closing {
-        .list-closing {
-            .cadre-white {
-                left: 13rem;
-            }
-
-            ul {
-                left: 22rem;
-            }
-        }
-
-        img {
-            margin-left: 6.5rem;
-        }
-
         #image-academie {
             margin-left: 6.5rem;
         }
@@ -488,12 +388,9 @@
 @media (min-width: 1400px) {
     .page-closing {
         .list-closing {
-            .cadre-white {
-                left: 15rem;
-            }
 
             ul {
-                left: 24rem;
+                left: 33%;
             }
         }
 
@@ -544,11 +441,12 @@
             .cadre-white {
                 width: 30rem;
                 height: 30rem;
-                top: 11rem;
-                left: 12.5rem;
+                top: 25%;
             }
 
             ul {
+                left: 39%;
+
                 li {
                     font-size: 2rem;
                 }
