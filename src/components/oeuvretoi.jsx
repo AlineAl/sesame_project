@@ -11,40 +11,13 @@ import principalImage from '../images/stefan-stefancik-QXevDflbl8A-unsplash.jpg'
 function Oeuvretoi() {
     const [isLoading, setIsLoading] = useState(true);
     const [articles, setArticles] = useState([]);
-
-    const [articleOeuvre, setArticleOeuvre] = useState({});
-
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            const {data} = axios.post('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres?populate=*', {
-                data: {
-                    titleOeuvre: articleOeuvre.titleOeuvre,
-                    contentOeuvre: articleOeuvre.contentOeuvre,               
-                }
-                })
-                console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-    
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticleOeuvre({
-            ...articleOeuvre,
-            [name]: value,
-        })
-    } 
     
     useEffect(() => {
         GetArticlesOeuvre();
     },[])
 
     function GetArticlesOeuvre() {
-        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres')
+        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres?populate=*')
         .then((response) => {
             setIsLoading(false);
             setArticles(response.data.data);
@@ -128,7 +101,7 @@ function Oeuvretoi() {
                             <img className="img-arbre-vie" src={arbreVie} alt="image qui illustre un arbre celtique" />
                         </div>
                         <div className="image-media-oeuvre-toi">
-                            <img src={principalImage} alt="image principale de la page oeuvre-toi" />
+                            <img className="img-photo-oeuvre" src={principalImage} alt="image principale de la page oeuvre-toi" />
                         </div>
                     </div>
 
@@ -141,11 +114,10 @@ function Oeuvretoi() {
                                     <a href={`#${article.attributes.titleOeuvre}`}>
                                         <div className="card-vertical">
                                             <div>
-                                                <img className="img-vertical-carousel" src={carouselImage} alt="" />
+                                            {(article.attributes.imageOeuvre.data) === null ? '' : <img src={article.attributes.imageOeuvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}
                                             </div>
                                             <div className="text-vertical">
                                                 <h3>{article.attributes.titleOeuvre}</h3>
-                                                <img src={article.attributes.imageOeuvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
                                                 <ReactMarkdown>{article.attributes.contentOeuvre}</ReactMarkdown>
                                             </div>
                                         </div>
@@ -165,7 +137,7 @@ function Oeuvretoi() {
                     <Link to={`/chronique/${article.id}`}>
                         <section className="oeuvre-article-details">
                             <h3 id={article.attributes.titleOeuvre}>{article.attributes.titleOeuvre}</h3>
-                            <img src={articleDetails} alt="image qui illustre le détail de l'article" />
+                            {(article.attributes.imageOeuvre.data) === null ? '' : <img src={article.attributes.imageOeuvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}
                             <ReactMarkdown>{article.attributes.contentOeuvre}</ReactMarkdown>
                         </section>
                     </Link>

@@ -94,7 +94,7 @@ function Apropos() {
                     <div className="page-a-propos">
                         <div>
                             <h1>À propos de moi</h1>
-                            <img src={article.attributes.imageApropos.data[0].attributes.url} alt="image qui illustre le détail de l'article" />                   
+                            {article.attributes.imageApropos.data === null ? '' : <img src={article.attributes.imageApropos.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}                  
                         </div>
                         <div className="text-apropos">
                             <h2>{article.attributes.titleApropos}</h2>

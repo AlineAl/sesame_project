@@ -9,9 +9,19 @@
 
 .card-article-principal-oeuvre {
     background-color: #F2F2E2;
+    position: relative;
+    height: 15rem;
 
-    img {
-        width: 100%;
+    .img-photo-oeuvre {
+        display: none;
+    }
+
+    .img-arbre-vie {
+        position: absolute;
+        width: 20rem;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     h1 {
@@ -35,7 +45,7 @@
     .cards-carousel-oeuvre-toi {
         text-align: center;
         display: flex;
-        margin-top: 3rem;
+        margin-top: 8rem;
         margin-bottom: 2rem;
     
         a {
@@ -120,7 +130,7 @@ hr {
     }
 
     p {
-        text-align: justify;
+        text-align: left;
         padding: 1rem;
         margin: 0;
     }

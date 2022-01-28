@@ -107,7 +107,7 @@ function Chronique() {
                                 <a href={`#${article.attributes.titleChronique}`}>
                                     <div className="card-vertical" id="card-vertical-2">
                                         <div>
-                                            <img className="img-vertical-carousel" src={article.attributes.imageChronique.data[0].attributes.url} alt="" />
+                                        {(article.attributes.imageChronique.data) === null ? '' : <img className="img-vertical-carousel" src={article.attributes.imageChronique.data[0].attributes.url} alt="" />}
                                         </div>
                                         <div className="text-vertical">
                                             <h3>{article.attributes.titleChronique}</h3>
@@ -129,7 +129,7 @@ function Chronique() {
                                 <a href={`#${article.attributes.titleChronique}`}>
                                     <div key={article.id} className="card-vertical" id="card-vertical-2">
                                         <div>
-                                            <img className="img-vertical-carousel" src={article.attributes.imageChronique.data[0].attributes.url} alt="" />
+                                        {(article.attributes.imageChronique.data) === null ? '' : <img className="img-vertical-carousel" src={article.attributes.imageChronique.data[0].attributes.url} alt="" />}
                                         </div>
                                         <div className="text-vertical">
                                             <h3>{article.attributes.titleChronique}</h3>
@@ -153,7 +153,7 @@ function Chronique() {
                         <section className="article-details">
                             <p className="date-chronique">{article.attributes.dateChronique}</p>
                             <h3 id={article.attributes.titleChronique}>{article.attributes.titleChronique}</h3>
-                            <img src={article.attributes.imageChronique.data[0].attributes.url} alt="image qui illustre le détail de l'article" />
+                            {(article.attributes.imageChronique.data) === null ? '' : <img src={article.attributes.imageChronique.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}
                             <ReactMarkdown>{article.attributes.contentChronique}</ReactMarkdown>
                         </section>
                     </Link>

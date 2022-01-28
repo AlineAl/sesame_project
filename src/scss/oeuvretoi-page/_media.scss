@@ -1,19 +1,36 @@
 @media (min-width: 768px) {
     .card-article-principal-oeuvre {
-        display: flex;
-        justify-content: space-around;
+        height: 20rem;
+
+        h1 {
+            position: absolute;
+            text-align: left;
+            top: 12%;
+            left: 31%;
+            transform: translate(-50%, -50%);
+        }
+
+        .img-arbre-vie {
+            width: 30rem;
+            left: 30%;
+        }
 
         .image-media-oeuvre-toi {
-            display: inline-block;
-            width: 50rem;
-            margin-right: 2rem;
-            margin-top: 2rem;
+            .img-photo-oeuvre {
+                display: inline-block;
+                width: 18rem;
+                position: absolute;
+                top: 76%;
+                left: 76%;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
     .oeuvre-toi {
         #horizontal-carousel-oeuvre {
             margin-left: 9rem;
+            margin-top: 13rem;
         }
     }
 
@@ -23,15 +40,15 @@
 
     .oeuvre-article-details {
         img {
-            width: 60%;
+            width: 40%;
             display: flex;
             margin: 0 auto;
         }
 
         p {
+            margin: auto;
             display: flex;
-            margin: 0 auto;
-            width: 60%;
+            width: 80%;
         }
     }
 }
@@ -64,6 +81,17 @@
             margin-left: 13.5rem;
         }
     }
+
+    .oeuvre-article-details {
+        p {
+            width: 70%;
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 @media (min-width: 1122px) {
@@ -91,12 +119,33 @@
 }
 
 @media (min-width: 1440px) {
+    .card-article-principal-oeuvre {
+        height: 28rem;
+
+        .img-arbre-vie {
+            width: 46rem;
+            left: 30%;
+        }
+
+        .image-media-oeuvre-toi {
+            .img-photo-oeuvre {
+                width: 24rem;
+            }
+        }
+    }
+
+    .horizontal-carousel-oeuvre .cards-carousel-oeuvre-toi {
+        margin-top: 18rem;
+        margin-bottom: 6rem;
+    }
+
     .oeuvre-article-details {
         h3 {
-            font-size: 2rem;
+            font-size: 2.5rem;
         }
 
         p {
+            width: 60%;
             font-size: 1.5rem;
         }
     }
