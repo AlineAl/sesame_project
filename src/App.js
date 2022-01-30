@@ -11,6 +11,7 @@ import OneArticleAcademie from './components/displayOneArticleAcademie';
 import OneArticleDecouvre from './components/displayOneArticleDecouvre';
 import OneArticleChronique from './components/displayOneArticleChronique';
 import OneArticleTemoignage from './components/displayOneArticleTemoignage';
+import OneArticleOeuvre from './components/displayOneArticleOeuvreToi';
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/academie/:id" element={<OneArticleAcademie />}></Route>
           <Route path="/temoignage/:id" element={<OneArticleTemoignage />}></Route>
           <Route path="/oeuvretoi" element={<OeuvreToi />}></Route>
+          <Route path="/oeuvretoi/:id" element={<OneArticleOeuvre />}></Route>
         </Routes>
       </Router>
     </div>

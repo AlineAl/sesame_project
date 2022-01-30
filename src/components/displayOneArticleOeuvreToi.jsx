@@ -1,26 +1,30 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-function Apropos() {
+function DisplayOneArticleOeuvreToi() {
+    const [article, setArticle] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [articles, setArticles] = useState(null);
- 
-    useEffect(() => {
-        GetArticlesApropos();
-    },[])
+    const { id } = useParams();
 
-    function GetArticlesApropos() {
-        axios.get('https://sesameoeuvretoiadmin.herokuapp.com/api/articles-apropos?populate=*')
-        .then((data) => {
-            setArticles(data.data.data);
-            console.log(data.data.data);
-            setIsLoading(false);
-        })
-        .catch(error => {
+    const GetOneArticleOeuvre = async () => {
+        try {
+            axios.get(`https://sesameoeuvretoiadmin.herokuapp.com/api/articles-oeuvres/${id}?populate=*`)
+            .then((response) => {
+                console.log(response.data.data);
+                setArticle(response.data.data);
+                setIsLoading(false);
+            })
+        } catch(error) {
             console.log(error);
-        })
+        }
     }
+
+    useEffect(() => {
+        GetOneArticleOeuvre();
+    },[])
 
     const displaySelectClosing = async () => {
         let select = document.querySelector(".select-navbar");
@@ -43,7 +47,7 @@ function Apropos() {
     }
 
     return (
-        <div className="container-page-apropos">
+    <div>
            <nav>
                 <div className="navbar">
                     <div className="logo-sesame">
@@ -87,25 +91,19 @@ function Apropos() {
                 </div>
             </nav>
 
-            <section>
-                {
-                    isLoading ? 'Loading...' :
-                    articles.map((article) =>
-                    <div className="page-a-propos">
-                        <div>
-                            <h1>À propos de moi</h1>
-                            {article.attributes.imageApropos.data === null ? '' : <img src={article.attributes.imageApropos.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}                  
-                        </div>
-                        <div className="text-apropos">
-                            <h2>{article.attributes.titleApropos}</h2>
-                            <p>{article.attributes.contentApropos}</p>             
-                        </div>
-                    </div>
-                    )
-                }
-            </section>
-        </div>
-    )
+        <section className="container-find-one">
+            {
+                isLoading ? 'Loading...' :
+            <div className="text-find-one">
+                <p className="date-academie">{article.attributes.dateOeuvre}</p>
+                {(article.attributes.imageOeuvre.data) === null ? '' : <img id="img-academie-article" src={article.attributes.imageOeuvre.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}
+                <h2>{article.attributes.titleOeuvre}</h2>
+                <ReactMarkdown>{article.attributes.contentOeuvre}</ReactMarkdown>         
+            </div>
+            }
+        </section>
+    </div>
+  )
 }
 
-export default Apropos;
+export default DisplayOneArticleOeuvreToi;

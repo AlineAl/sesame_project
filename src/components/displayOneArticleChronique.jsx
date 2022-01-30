@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -10,7 +11,7 @@ function DisplayOneArticleChronique() {
 
     const GetOneArticleChronique = async () => {
         try {
-            axios.get(`http://localhost:1337/api/articles-chroniques/${id}`)
+            axios.get(`https://sesameoeuvretoiadmin.herokuapp.com/api/articles-chroniques/${id}?populate=*`)
             .then((response) => {
                 console.log(response.data.data);
                 setArticle(response.data.data);
@@ -21,41 +22,9 @@ function DisplayOneArticleChronique() {
         }
     }
 
-    const deleteOneArticleChronique = async () => {
-        try {
-            axios.delete(`http://localhost:1337/api/articles-chroniques/${id}`)
-            window.location.href="http://localhost:3000/chronique";
-            alert('Votre article a bien été supprimé');
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
-    const updateOneArticleChronique = async () => {
-        try {
-            const { data } = axios.put(`http://localhost:1337/api/articles-chroniques/${id}`, {
-                data: {
-                    titleChronique: article.titleChronique,
-                    contentChronique: article.contentChronique,              
-                }
-            })
-            console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
     useEffect(() => {
         GetOneArticleChronique();
     },[])
-
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticle({
-            ...article,
-            [name]: value,
-        })
-    }
 
     const displaySelectClosing = async () => {
         let select = document.querySelector(".select-navbar");
@@ -90,12 +59,12 @@ function DisplayOneArticleChronique() {
                 </div>
                 <div className="list-navbar-media">
                     <ul>
-                        <Link to="/apropos"><li className="list-navbar-media-1">À propos</li></Link>
-                        <Link to="/academie"><li className="list-navbar-media-2">J'ouvre les portes de l'académie</li></Link>
-                        <Link to="/jedecouvre"><li className="list-navbar-media-3">Je découvre</li></Link>
-                        <Link to="/chronique"><li className="list-navbar-media-4">Chronique lifestyle</li></Link>
-                        <Link to="/oeuvretoi"><li className="list-navbar-media-5">Oeuvre-toi</li></Link>
-                        <Link to="/contact"><li className="list-navbar-media-6">Contact</li></Link>
+                        <li className="list-navbar-media-1"><Link to="/apropos">À propos</Link></li>
+                        <li className="list-navbar-media-2"><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                        <li className="list-navbar-media-3"><Link to="/jedecouvre">Je découvre</Link></li>
+                        <li className="list-navbar-media-4"><Link to="/chronique">Chronique lifestyle</Link></li>
+                        <li className="list-navbar-media-5"><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                        <li className="list-navbar-media-6"><Link to="/contact">Contact</Link></li>
                     </ul>              
                 </div>
                 <div className="navbar-desktop">
@@ -109,37 +78,27 @@ function DisplayOneArticleChronique() {
                                 <li id="closing-list-nav" onClick={displaySelectClosing}>Closing ▿</li>
                                 <div className="select-navbar">
                                     <ul name="closings" id="closings">
-                                        <Link to="/academie"><li>J'ouvre les portes de l'académie</li></Link>
-                                        <Link to="/jedecouvre"><li>Je découvre</li></Link>
+                                        <li><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                                        <li><Link to="/jedecouvre">Je découvre</Link></li>
                                     </ul>
                                 </div>
                             </div>
-                            <Link to="/chronique"><li>Chronique lifestyle</li></Link>
-                            <Link to="/oeuvretoi"><li>Oeuvre-toi</li></Link>
-                            <Link to="/contact"><li>Contact</li></Link>
+                            <li><Link to="/chronique">Chronique lifestyle</Link></li>
+                            <li><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>                    
-                    </div>                    
+                    </div>
                 </div>
             </nav>
 
             <section className="container-find-one">
                 {
                     isLoading ? 'Loading...' :
-                    <form method="put" onSubmit={updateOneArticleChronique}>
-                        <input type="text" id="titleChronique" name="titleChronique" placeholder={article.attributes.titleChronique} onChange={handleChange} />
-                        <textarea type="text" name="contentChronique" id="contentChronique" placeholder={article.attributes.contentChronique} onChange={handleChange} />
-                        <input type="submit" value="Envoyer" class="submit-form" />
-                    </form> 
-                }
-                {
-                    isLoading ? 'Loading...' :
                 <div className="text-find-one">
-                    <div className="title-cross-update">
-                        <h2>{article.attributes.titleChronique}</h2>
-                        <i onClick={() => deleteOneArticleChronique(article.id)} id="delete-button" class="fas fa-times"></i>
-                        <i id="update-button" class="fas fa-pen"></i>
-                    </div>
-                    <p>{article.attributes.contentChronique}</p>                  
+                    <p className="date-academie">{article.attributes.dateChronique}</p>
+                    {(article.attributes.imageChronique.data) === null ? '' : <img id="img-academie-article" src={article.attributes.imageChronique.data[0].attributes.url} alt="image qui illustre le détail de l'article" />}
+                    <h2>{article.attributes.titleChronique}</h2>
+                    <ReactMarkdown>{article.attributes.contentChronique}</ReactMarkdown>                  
                 </div>
                 }
             </section>      

@@ -61,7 +61,7 @@ function Landingpage() {
 
     return (
         <div>
-            <nav>
+           <nav>
                 <div className="navbar">
                     <div className="logo-sesame">
                         <Link to="/"><h1>Sésame œuvre-toi</h1></Link>
@@ -72,12 +72,12 @@ function Landingpage() {
                 </div>
                 <div className="list-navbar-media">
                     <ul>
-                        <Link to="/apropos"><li className="list-navbar-media-1">À propos</li></Link>
-                        <Link to="/academie"><li className="list-navbar-media-2">J'ouvre les portes de l'académie</li></Link>
-                        <Link to="/jedecouvre"><li className="list-navbar-media-3">Je découvre</li></Link>
-                        <Link to="/chronique"><li className="list-navbar-media-4">Chronique lifestyle</li></Link>
-                        <Link to="/oeuvretoi"><li className="list-navbar-media-5">Oeuvre-toi</li></Link>
-                        <Link to="/contact"><li className="list-navbar-media-6">Contact</li></Link>
+                        <li className="list-navbar-media-1"><Link to="/apropos">À propos</Link></li>
+                        <li className="list-navbar-media-2"><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                        <li className="list-navbar-media-3"><Link to="/jedecouvre">Je découvre</Link></li>
+                        <li className="list-navbar-media-4"><Link to="/chronique">Chronique lifestyle</Link></li>
+                        <li className="list-navbar-media-5"><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                        <li className="list-navbar-media-6"><Link to="/contact">Contact</Link></li>
                     </ul>              
                 </div>
                 <div className="navbar-desktop">
@@ -91,16 +91,16 @@ function Landingpage() {
                                 <li id="closing-list-nav" onClick={displaySelectClosing}>Closing ▿</li>
                                 <div className="select-navbar">
                                     <ul name="closings" id="closings">
-                                        <Link to="/academie"><li>J'ouvre les portes de l'académie</li></Link>
-                                        <Link to="/jedecouvre"><li>Je découvre</li></Link>
+                                        <li><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                                        <li><Link to="/jedecouvre">Je découvre</Link></li>
                                     </ul>
                                 </div>
                             </div>
-                            <Link to="/chronique"><li>Chronique lifestyle</li></Link>
-                            <Link to="/oeuvretoi"><li>Oeuvre-toi</li></Link>
-                            <Link to="/contact"><li>Contact</li></Link>
+                            <li><Link to="/chronique">Chronique lifestyle</Link></li>
+                            <li><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>                    
-                    </div>                    
+                    </div>
                 </div>
             </nav>
 

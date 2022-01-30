@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
+import ReactMarkdown from 'react-markdown';
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+import imageTemoignage from '../images/karina-vargas-J7hCnavj7QE-unsplash.jpg';
 
 function DisplayOneArticleTemoignage() {
     const [article, setArticle] = useState(null);
@@ -10,7 +13,7 @@ function DisplayOneArticleTemoignage() {
 
     const GetOneArticleTemoignage = async () => {
         try {
-            axios.get(`http://localhost:1337/api/temoignages/${id}`)
+            axios.get(`https://sesameoeuvretoiadmin.herokuapp.com/api/temoignages/${id}?populate=*`)
             .then((response) => {
                 console.log(response.data.data);
                 setArticle(response.data.data);
@@ -21,40 +24,9 @@ function DisplayOneArticleTemoignage() {
         }
     }
 
-    const deleteOneArticleTemoignage = async () => {
-        try {
-            axios.delete(`http://localhost:1337/api/temoignages/${id}`)
-            window.location.href="http://localhost:3000/academie";
-            alert('Votre article a bien été supprimé');
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
-    const updateOneArticleTemoignage = async () => {
-        try {
-            const { data } = axios.put(`http://localhost:1337/api/temoignages/${id}`, {
-                data: {
-                    contentTemoignage: article.contentTemoignage,              
-                }
-            })
-            console.log(data);
-        } catch(error) {
-            console.log(error);
-        }
-    }
-
     useEffect(() => {
         GetOneArticleTemoignage();
     },[])
-
-    const handleChange = ({ currentTarget }) => {
-        const {name, value} = currentTarget;
-        setArticle({
-            ...article,
-            [name]: value,
-        })
-    }
 
     const displaySelectClosing = async () => {
         let select = document.querySelector(".select-navbar");
@@ -89,12 +61,12 @@ function DisplayOneArticleTemoignage() {
                 </div>
                 <div className="list-navbar-media">
                     <ul>
-                        <Link to="/apropos"><li className="list-navbar-media-1">À propos</li></Link>
-                        <Link to="/academie"><li className="list-navbar-media-2">J'ouvre les portes de l'académie</li></Link>
-                        <Link to="/jedecouvre"><li className="list-navbar-media-3">Je découvre</li></Link>
-                        <Link to="/chronique"><li className="list-navbar-media-4">Chronique lifestyle</li></Link>
-                        <Link to="/oeuvretoi"><li className="list-navbar-media-5">Oeuvre-toi</li></Link>
-                        <Link to="/contact"><li className="list-navbar-media-6">Contact</li></Link>
+                        <li className="list-navbar-media-1"><Link to="/apropos">À propos</Link></li>
+                        <li className="list-navbar-media-2"><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                        <li className="list-navbar-media-3"><Link to="/jedecouvre">Je découvre</Link></li>
+                        <li className="list-navbar-media-4"><Link to="/chronique">Chronique lifestyle</Link></li>
+                        <li className="list-navbar-media-5"><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                        <li className="list-navbar-media-6"><Link to="/contact">Contact</Link></li>
                     </ul>              
                 </div>
                 <div className="navbar-desktop">
@@ -108,37 +80,27 @@ function DisplayOneArticleTemoignage() {
                                 <li id="closing-list-nav" onClick={displaySelectClosing}>Closing ▿</li>
                                 <div className="select-navbar">
                                     <ul name="closings" id="closings">
-                                        <Link to="/academie"><li>J'ouvre les portes de l'académie</li></Link>
-                                        <Link to="/jedecouvre"><li>Je découvre</li></Link>
+                                        <li><Link to="/academie">J'ouvre les portes de l'académie</Link></li>
+                                        <li><Link to="/jedecouvre">Je découvre</Link></li>
                                     </ul>
                                 </div>
                             </div>
-                            <Link to="/chronique"><li>Chronique lifestyle</li></Link>
-                            <Link to="/oeuvretoi"><li>Oeuvre-toi</li></Link>
-                            <Link to="/contact"><li>Contact</li></Link>
+                            <li><Link to="/chronique">Chronique lifestyle</Link></li>
+                            <li><Link to="/oeuvretoi">Oeuvre-toi</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
                         </ul>                    
-                    </div>                    
+                    </div>
                 </div>
             </nav>
             <section className="container-find-one">
                 {
                     isLoading ? 'Loading...' :
-                    <form method="put" onSubmit={updateOneArticleTemoignage}>
-                        <textarea type="text" name="contentTemoignage" id="contentTemoignage" placeholder={article.attributes.contentTemoignage} onChange={handleChange} />
-                        <input type="submit" value="Envoyer" class="submit-form" />
-                    </form> 
-                }
-                {
-                    isLoading ? 'Loading...' :
-                <div className="text-find-one">
-                    <div className="title-cross-update">
-                        <i onClick={() => deleteOneArticleTemoignage(article.id)} id="delete-button" class="fas fa-times"></i>
-                        <i id="update-button" class="fas fa-pen"></i>
+                    <div className="text-find-one" id="text-one-temoin">
+                        <img src={imageTemoignage} alt="arbre de vie témoignages" />
+                        <ReactMarkdown>{article.attributes.contentTemoignage}</ReactMarkdown>         
                     </div>
-                    <p>{article.attributes.contentTemoignage}</p>                  
-                </div>
                 }
-            </section>      
+            </section>
         </div>
     )
 }
